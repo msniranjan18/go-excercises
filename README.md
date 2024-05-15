@@ -1,2 +1,2 @@
 # Go-Excercises
-Go Excercise
+Go Excercises
