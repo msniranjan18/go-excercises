@@ -2,23 +2,24 @@ package main
 
 import (
 	"fmt"
+	"io/ioutil"
 	"net/http"
 	"os"
-	"time"
-	"io/ioutil"
-	"sync"
 	"strconv"
+	"sync"
+	"time"
 )
+
 var (
 	NO_OF_THREAD = 1
 	API_ENDPOINT = "http://169.47.92.210:30763"
-	API_REQUEST = "tea"
+	API_REQUEST  = "tea"
 )
 
 func getRequest(thread_no int, wg *sync.WaitGroup) {
-	req_time := time.Now()	
+	req_time := time.Now()
 	URL_STR := API_ENDPOINT + "/" + API_REQUEST
-	
+
 	client := http.Client{}
 
 	req, err := http.NewRequest("GET", URL_STR, nil)
@@ -63,14 +64,14 @@ func main() {
 
 	wg := new(sync.WaitGroup)
 
-	fmt.Printf("Testing with NO_OF_THREAD: [%d]\n",NO_OF_THREAD)
+	fmt.Printf("Testing with NO_OF_THREAD: [%d]\n", NO_OF_THREAD)
 
 	for true {
 		for i := 0; i < NO_OF_THREAD; i++ {
 			wg.Add(1)
 			go getRequest(i, wg)
 		}
-		time.Sleep(10*time.Second)
+		time.Sleep(10 * time.Second)
 		fmt.Println("Next Iteration")
 	}
 	wg.Wait()
