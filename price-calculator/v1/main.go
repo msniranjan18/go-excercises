@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	fmt.Println("Price-Calculator")
+	fmt.Println("Price-Calculator-v1")
 	taxRates := []float64{0, 0.07, 0.01, 0.15}
 	prices := []float64{10, 20, 30}
 
