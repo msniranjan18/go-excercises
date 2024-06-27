@@ -15,5 +15,6 @@ func main() {
 		romanNo = strings.ToUpper(romanNo)
 		fmt.Printf("%d\n\n", roman2int.Roman2Int(romanNo))
 		fmt.Printf("%d\n\n", roman2int.Roman2Intv2(romanNo))
+		fmt.Printf("%d\n\n", roman2int.Roman2IntOptimize(romanNo))
 	}
 }
