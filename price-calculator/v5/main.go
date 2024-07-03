@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	fmt.Println("Price-Calculator-v4-Using-filemanager-package")
+	fmt.Println("Price-Calculator-v2")
 	taxRates := []float64{0, 0.07, 0.01, 0.15}
 
 	for _, taxRate := range taxRates {
