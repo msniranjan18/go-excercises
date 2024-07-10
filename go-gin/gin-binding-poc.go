@@ -28,3 +28,7 @@ func main() {
    })
    engine.Run(":3000")
 }
+
+/*
+Note: Please check https://github.com/msniranjan18/go-gin-basic/blob/master/ex2/main.go for more info.
+*/
