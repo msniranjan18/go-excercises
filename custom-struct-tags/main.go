@@ -32,3 +32,9 @@ Use-of-custom-struct-tags
 dark RAM
 bar shyam
 */
+
+/*
+Note: Please check below examples:
+https://github.com/msniranjan18/go-gin-basic/blob/master/ex2/main.go
+https://github.com/msniranjan18/go-excercises/blob/master/custom-struct-tags/main.go
+*/
